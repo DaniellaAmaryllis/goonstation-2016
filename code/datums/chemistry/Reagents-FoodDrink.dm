@@ -262,7 +262,7 @@ datum
 			taste = "spooky"
 
 		fooddrink/alcoholic/beepskybeer
-			name = "Beepskybr‰u Security Schwarzbier"
+			name = "Beepskybr√§u Security Schwarzbier"
 			id = "beepskybeer"
 			description = "A dark German beer, typically served with dark bread, cream cheese, and an intense appreciation for the law."
 			reagent_state = LIQUID
@@ -1118,7 +1118,7 @@ datum
 			reagent_state = LIQUID
 
 		fooddrink/alcoholic/pinacolada
-			name = "PiÒa Colada"
+			name = "Pi√±a Colada"
 			id = "pinacolada"
 			fluid_r = 255
 			fluid_g = 255
@@ -1774,7 +1774,7 @@ datum
 				..(M)
 				return
 
-		fooddrink/salt
+				fooddrink/salt
 			name = "salt"
 			id = "salt"
 			description = "Sodium chloride, common table salt."
@@ -1798,9 +1798,10 @@ datum
 					return
 				if(prob(70))
 					M.take_brain_damage(1)
+				if(prob(50))
+					M.reagents.add_reagent("diluted_fliptonium", 1)
 				..(M)
 				return
-
 		fooddrink/pepper
 			name = "pepper"
 			id = "pepper"
